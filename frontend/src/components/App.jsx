@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import io from 'socket.io-client';
-import './styles/App.css';
+import '../styles/App.css';
 import Dashboard from './components/Dashboard';
 import AddProfile from './components/AddProfile';
 import Analytics from './components/Analytics';
