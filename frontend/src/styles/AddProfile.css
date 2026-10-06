@@ -1,0 +1,223 @@
+.add-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  padding: 2rem;
+}
+
+.add-profile-card {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-profile-card h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.add-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.form-group input {
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(31, 119, 232, 0.1);
+  background-color: var(--bg-primary);
+}
+
+.form-group input:hover {
+  border-color: var(--primary);
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+}
+
+.input-hint {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+.error-message {
+  background-color: rgba(231, 76, 60, 0.15);
+  border-left: 4px solid #e74c3c;
+  color: #c0392b;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  animation: slideDown 0.3s ease;
+}
+
+.success-message {
+  background-color: rgba(46, 204, 113, 0.15);
+  border-left: 4px solid #2ecc71;
+  color: #27ae60;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1f77e8, #1a5fd6);
+  color: white;
+  box-shadow: 0 4px 12px rgba(31, 119, 232, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(31, 119, 232, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--border);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--gray);
+  color: white;
+}
+
+.btn-primary:disabled, .btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.info-section, .note-section {
+  background: rgba(31, 119, 232, 0.08);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.info-section h3, .note-section h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.info-section ol, .note-section ul {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-left: 1.5rem;
+}
+
+.info-section li, .note-section li {
+  margin-bottom: 0.5rem;
+}
+
+.note-section {
+  background: rgba(243, 156, 18, 0.08);
+  border-left-color: #f39c12;
+}
+
+.note-section h4 {
+  color: #f39c12;
+}
+
+@media (max-width: 600px) {
+  .add-profile-container {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .add-profile-card {
+    padding: 2rem;
+  }
+
+  .add-profile-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .info-section, .note-section {
+    padding: 1rem;
+  }
+}

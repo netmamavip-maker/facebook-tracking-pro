@@ -1,0 +1,26 @@
+{
+  "short_name": "Facebook Tracker",
+  "name": "Facebook Tracker Premium v1.0",
+  "description": "Real-time Facebook Profile Monitoring Dashboard",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1f77e8",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["productivity"],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}

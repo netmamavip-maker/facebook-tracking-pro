@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: facebook-tracker-backend
+    env: python
+    pythonVersion: 3.11
+    buildCommand: pip install -r requirements_backend.txt
+    startCommand: python app.py
+    envVars:
+      - key: FB_EMAIL
+        sync: false
+      - key: FB_PASSWORD
+        sync: false
+      - key: PORT
+        value: 5000
+    health_check_path: /
+    
+  - type: static
+    name: facebook-tracker-frontend
+    build_directory: frontend/build
+    env_clear_time: 12000
+    env_vars:
+      - key: REACT_APP_API_URL
+        value: https://facebook-tracker-backend.onrender.com
